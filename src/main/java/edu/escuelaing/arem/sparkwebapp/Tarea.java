@@ -30,7 +30,7 @@ public class Tarea {
     */
     
     public static void cadena(String recibido){
-       String[] temp = recibido.split(",");
+       String[] temp = recibido.split(" ");
         for (int i = 0; i < temp.length; i++) {           
             double nodo = Double.parseDouble(temp[i]);
             lista.append(nodo);
