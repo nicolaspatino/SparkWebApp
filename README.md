@@ -6,4 +6,4 @@ nicolas patiño parra
 ------------------------------------------------------------------------------------------------------------------------------------------
 este programa calculara la media y la desviacion estandar de una lista encadenada, los datos deberia leerlos de una pagina web.
 ------------------------------------------------------------------------------------------------------------------------------------------
-link heroku : https://pacific-tundra-74402.herokuapp.com/inputdata
+link heroku :https://murmuring-depths-14026.herokuapp.com/inputdata
