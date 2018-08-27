@@ -40,7 +40,7 @@ public class SparkWebApp {
                 = "<!DOCTYPE html>"
                 + "<html>"
                 + "<body>"
-                + "<h2>INGRESE LOS DATOS SEPARADOS POR UN ESPACIO</h2>"
+                + "<h2>INGRESE LOS DATOS SEPARADOS POR UNA COMA</h2>"
                 + "<form action=\"/results\">"
                 + "  lista:<br>"
                 + "  <input type=\"text\" name=\"lista\" value=>"
