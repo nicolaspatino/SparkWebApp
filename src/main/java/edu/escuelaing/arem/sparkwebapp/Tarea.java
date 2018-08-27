@@ -4,16 +4,6 @@
  * and open the template in the editor.
  */
 package edu.escuelaing.arem.sparkwebapp;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author 2112712
@@ -26,15 +16,30 @@ public class Tarea {
      */
     private static double mean,deviation;
     private static LinkedList lista;
+    private String [] recibido;
     
     
-    public Tarea(LinkedList list){
-        this.lista=list;
+    public Tarea(String arreglo){
+        this.lista=new LinkedList();
+        cadena(arreglo);
         
     }
     /**
+    *@void convierte una cadena de texto recibida en nodos y los agrega
+    * a una lista encadenada
+    */
+    
+    public static void cadena(String recibido){
+       String[] temp = recibido.split(",");
+        for (int i = 0; i < temp.length; i++) {           
+            double nodo = Double.parseDouble(temp[i]);
+            lista.append(nodo);
+        }
+    }
+      /**
     *@return retorna la media de una lista encadenada
     */
+    
     public static double mean(){
         Nodo temporal=lista.getCabeza();
         int cont=0;
@@ -60,8 +65,6 @@ public class Tarea {
         deviation=Math.sqrt(deviation/(cont-1));
         return  deviation;
     }
-    /**
-    *@param archivo representa el nombre del archivo que se quiere leer para construir la lista encadenada
-    */
+    
     
 }
