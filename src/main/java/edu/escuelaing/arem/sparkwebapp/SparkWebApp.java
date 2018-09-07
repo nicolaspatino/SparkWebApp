@@ -62,11 +62,7 @@ public class SparkWebApp {
                 + "<h2>RESULTADO</h2>"
                 + "<table class =\"egt\">"
                 + "<tr>"
-                + "<td>{\n" +
-                "  \"lista\":"+a.listaa()+"\n" +
-		"  \"maximo\":"+a.maximo()+"\n" +
-		"  \"minimo\":"+a.minimo()+"\n" +
-		"  \"sumatoria\":"+a.sumatoria()+"}</td>"
+                + "<td>{\n" +a.json()
                 + "</tr>"
                 + "</table>"
                 + "</body>"

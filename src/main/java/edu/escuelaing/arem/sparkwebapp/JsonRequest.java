@@ -88,4 +88,10 @@ public class JsonRequest {
         listaa+="}";
         return listaa;
     }
+    public static String json(){
+        String cadenaaa="  \"lista\":"+listaa()+"\n" +"  \"maximo\":"+maximo()+"\n" +"  \"minimo\":"+minimo()+"\n" +"  \"sumatoria\":"+sumatoria()+"}";
+        return cadenaaa;
+    }
+       
+    
 }
