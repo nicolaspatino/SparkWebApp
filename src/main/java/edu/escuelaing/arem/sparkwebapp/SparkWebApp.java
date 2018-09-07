@@ -54,9 +54,7 @@ public class SparkWebApp {
         return pageContent;
      }
     private static String resultsPage(Request req, Response res) {
-        System.out.println("HOLAA!");
-        Tarea a= new Tarea(req.queryParams("lista"));
-        System.out.println(a.mean());
+        JsonRequest a= new JsonRequest(req.queryParams("lista"));      
         String pageContent
                  = "<!DOCTYPE html>"
                 + "<html>"
@@ -64,12 +62,11 @@ public class SparkWebApp {
                 + "<h2>RESULTADO</h2>"
                 + "<table class =\"egt\">"
                 + "<tr>"
-                + "<td>MEDIA</td>"
-                + "<td>DESVIACION ESTANDAR</td>"
-                + "</tr>"
-                + "<tr>"
-                + "<td>"+a.mean()+"</td>"
-                + "<td>"+a.sdeviation()+"</td>"
+                + "<td>{\n" +
+                "  \"lista\":"+a.listaa()+"\n" +
+		"  \"maximo\":"+a.maximo()+"\n" +
+		"  \"minimo\":"+a.minimo()+"\n" +
+		"  \"sumatoria\":"+a.sumatoria()+"}</td>"
                 + "</tr>"
                 + "</table>"
                 + "</body>"
@@ -80,4 +77,3 @@ public class SparkWebApp {
     
 }
         
-            
